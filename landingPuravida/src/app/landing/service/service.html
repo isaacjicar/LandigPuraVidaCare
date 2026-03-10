@@ -1,27 +1,28 @@
+<!-- Sección de servicios con fondo verde muy suave -->
 <section id="services" class="relative w-full py-24 px-[5%] overflow-hidden bg-[#f0fdf4]">
 
-  <!-- Radial Glow -->
+  <!-- Resplandor radial decorativo centrado -->
   <div class="absolute inset-0 pointer-events-none"
     style="background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(13,148,136,0.04) 0%, transparent 100%);">
   </div>
 
-  <!-- Section Header -->
+  <!-- Encabezado centrado -->
   <div class="relative z-10 flex flex-col items-center text-center mb-14">
 
-    <!-- Tag -->
+    <!-- Etiqueta decorativa -->
     <div class="mb-2 px-5 py-2 uppercase tracking-widest text-[11px] font-semibold rounded-full border"
       style="background-color: rgba(13,148,136,0.10); border-color: rgba(13,148,136,0.25); color: #0d9488; font-family: 'Plus Jakarta Sans', sans-serif;">
       CATEGORÍAS
     </div>
 
-    <!-- Title -->
+    <!-- Título principal -->
     <h2 class="text-[48px] leading-tight text-[#1a1a1a] max-w-2xl m-0"
       style="font-family: 'Playfair Display', serif; font-weight: 900;">
       Servicios diseñados para lo que más importa
     </h2>
   </div>
 
-  <!-- Card Grid -->
+  <!-- Grid de tarjetas — 1/2/3 columnas según breakpoint -->
   <div class="relative z-10 flex justify-center">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
 
@@ -35,9 +36,9 @@
           'box-shadow': isHovered(i) ? '0 20px 40px rgba(13,148,136,0.12)' : '0 0 0 rgba(0,0,0,0)'
         }"
         (mouseenter)="setHovered(i)"
-        (mouseleave)="setHovered(null)"
-      >
-        <!-- Top Accent Line -->
+        (mouseleave)="setHovered(null)">
+
+        <!-- Línea accent superior — visible solo en hover -->
         <div
           class="absolute top-0 left-0 right-0 h-[3px] rounded-t-2xl transition-opacity duration-300"
           [ngStyle]="{
@@ -46,28 +47,28 @@
           }">
         </div>
 
-        <!-- Emoji -->
+        <!-- Emoji representativo del servicio -->
         <div class="text-[40px] mb-5">{{ service.emoji }}</div>
 
-        <!-- Title -->
+        <!-- Nombre del servicio -->
         <h3 class="text-[18px] font-semibold text-[#1a1a1a] mb-3 mt-0"
           style="font-family: 'Plus Jakarta Sans', sans-serif;">
           {{ service.title }}
         </h3>
 
-        <!-- Description -->
+        <!-- Descripción breve -->
         <p class="text-[14px] leading-relaxed text-[#6b7280] mb-4 mt-0"
           style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 400;">
           {{ service.description }}
         </p>
 
-        <!-- Tag Badge -->
+        <!-- Badge de categoría -->
         <span class="inline-block px-3 py-1 text-[12px] font-semibold rounded-full"
           style="background-color: rgba(13,148,136,0.10); color: #0d9488; font-family: 'Plus Jakarta Sans', sans-serif;">
           {{ service.tag }}
         </span>
-      </div>
 
+      </div>
     </div>
   </div>
 

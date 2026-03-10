@@ -1,12 +1,15 @@
+/* Sección con fondo verde muy suave */
 .role-section {
   background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
 }
 
+/* Tag/etiqueta decorativa teal semitransparente */
 .role-tag {
   background-color: rgba(13, 148, 136, 0.10);
   border: 1px solid rgba(13, 148, 136, 0.25);
 }
 
+/* Tarjeta base — blanca, redondeada, tamaño fijo */
 .role-card {
   background-color: #ffffff;
   border-radius: 24px;
@@ -15,22 +18,26 @@
   min-height: 360px;
 }
 
+/* Tarjeta seleccionada — fondo teal tenue + borde + halo */
 .role-card-selected {
   background-color: rgba(13, 148, 136, 0.06);
   border: 2px solid #0d9488;
   box-shadow: 0 0 0 4px rgba(13, 148, 136, 0.10);
 }
 
+/* Tarjeta sin seleccionar — borde sutil */
 .role-card-default {
   border: 1px solid rgba(13, 148, 136, 0.15);
   box-shadow: none;
 }
 
+/* Hover: sombra verde + sube levemente */
 .role-card-default:hover {
   box-shadow: 0 20px 40px rgba(13, 148, 136, 0.12);
   transform: translateY(-4px);
 }
 
+/* Botón  gradiente teal a verde */
 .btn-role {
   background: linear-gradient(135deg, #0d9488 0%, #10b981 100%);
 }

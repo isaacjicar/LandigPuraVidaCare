@@ -1,26 +1,27 @@
+<!-- Sección de selección de rol con fondo verde suave -->
 <section id="role-selection" class="relative w-full py-24 px-[5%] overflow-hidden role-section">
 
-  <!-- Section Header -->
+  <!-- Encabezado centrado -->
   <div class="relative z-10 flex flex-col items-center text-center mb-14">
 
-    <!-- Tag -->
+    <!-- Etiqueta decorativa -->
     <div class="mb-2 px-5 py-2 uppercase tracking-widest text-[11px] font-semibold rounded-full role-tag text-[#0d9488]">
       ACCESO PERSONALIZADO
     </div>
 
-    <!-- Title -->
+    <!-- Título principal -->
     <h2 class="text-5xl mb-3 font-display font-black leading-tight text-[#1a1a1a]">
       ¿Cómo querés ingresar?
     </h2>
 
-    <!-- Subtitle -->
+    <!-- Subtítulo -->
     <p class="text-lg text-[#6b7280]">
       Seleccioná tu rol para continuar con un registro personalizado.
     </p>
 
   </div>
 
-  <!-- Role Cards -->
+  <!-- Tarjetas de rol — generadas dinámicamente -->
   <div class="relative z-10 flex justify-center gap-7 flex-wrap mb-8">
     @for (role of roles; track $index) {
       <div
@@ -31,22 +32,22 @@
         (mouseenter)="hoveredRole = $index"
         (mouseleave)="hoveredRole = null">
 
-        <!-- Icon Container -->
-          <div class="inline-flex items-center justify-center mb-5 p-3 rounded-xl bg-[#0d9488]/10">
-           <span [innerHTML]="getIcon(role.icon)"></span>
-          </div>
+        <!-- Ícono del rol -->
+        <div class="inline-flex items-center justify-center mb-5 p-3 rounded-xl bg-[#0d9488]/10">
+          <span [innerHTML]="getIcon(role.icon)"></span>
+        </div>
 
-        <!-- Title -->
+        <!-- Nombre del rol -->
         <h3 class="mb-2 text-[20px] font-bold text-[#1a1a1a]">
           {{ role.title }}
         </h3>
 
-        <!-- Description -->
+        <!-- Descripción breve -->
         <p class="mb-6 text-[14px] leading-[1.6] text-[#6b7280]">
           {{ role.description }}
         </p>
 
-        <!-- CTA Button -->
+        <!-- Botón CTA — visible solo en hover o seleccionado -->
         <div class="transition-opacity duration-300"
           [class.opacity-100]="hoveredRole === $index || selectedRole === $index"
           [class.opacity-0]="hoveredRole !== $index && selectedRole !== $index">
@@ -56,7 +57,7 @@
     }
   </div>
 
-  <!-- Confirmation Text -->
+  <!-- Texto de confirmación al seleccionar un rol -->
   @if (selectedRole !== null) {
     <div class="relative z-10 text-center">
       <p class="text-[16px] font-semibold text-[#0d9488]">
