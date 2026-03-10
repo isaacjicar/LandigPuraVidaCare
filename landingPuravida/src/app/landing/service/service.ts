@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+// Modelo de cada tarjeta de servicio
 interface ServiceCard {
   emoji: string;
   title: string;
@@ -8,6 +9,7 @@ interface ServiceCard {
   tag: string;
 }
 
+// Componente standalone de la sección de servicios
 @Component({
   selector: 'app-services',
   templateUrl: './service.html',
@@ -15,8 +17,10 @@ interface ServiceCard {
   imports: [CommonModule],
 })
 export class ServicesComponent {
-  hoveredIndex: number | null = null;
 
+  hoveredIndex: number | null = null; // Índice de la tarjeta en hover
+
+  // Catálogo de servicios disponibles
   services: ServiceCard[] = [
     {
       emoji: '🚗',
@@ -48,18 +52,14 @@ export class ServicesComponent {
       description: 'Cuidados profesionales de enfermería y monitoreo de salud en casa.',
       tag: 'Salud'
     },
-    {
-      emoji: '🍳',
-      title: 'Preparación de comidas',
-      description: 'Servicio de cocina adaptada a necesidades nutricionales específicas.',
-      tag: 'Nutrición'
-    }
   ];
 
+  // Actualiza la tarjeta en hover (null al salir)
   setHovered(index: number | null): void {
     this.hoveredIndex = index;
   }
 
+  // Verifica si una tarjeta está en hover
   isHovered(index: number): boolean {
     return this.hoveredIndex === index;
   }
