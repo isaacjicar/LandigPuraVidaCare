@@ -4,12 +4,12 @@ import { Footercomponent } from './landing/footer/footer';
 import { NavigationComponent } from './landing/navigation/navigation';
 import { RoleSelectionComponent } from './landing/roleselection/roleselection';
 import { ServicesComponent } from './landing/service/service';
-import { TeamComponent } from './landing/team/team';
+
 
 
 @Component({
   selector: 'app-root',
-  imports: [Heroillustratedcomponent, NavigationComponent, RoleSelectionComponent, ServicesComponent,TeamComponent,Footercomponent],
+  imports: [Heroillustratedcomponent, NavigationComponent, RoleSelectionComponent, ServicesComponent,Footercomponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
