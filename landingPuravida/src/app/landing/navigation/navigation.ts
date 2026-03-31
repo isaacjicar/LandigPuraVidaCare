@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { environment } from '../../environments/puravidaCare';
 
 // Componente standalone de navegación
 @Component({
@@ -6,7 +7,9 @@ import { Component } from '@angular/core';
   templateUrl: './navigation.html',
   styleUrl: './navigation.css'
 })
+
 export class NavigationComponent {
+private readonly AUTH_URL = environment.authUrl;
 
   // Links visibles en la navbar
   navLinks = ['Nosotros', 'Servicios', 'Roles', 'Equipo'];
@@ -30,5 +33,11 @@ export class NavigationComponent {
         el.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     }
+  }
+
+
+
+  goToThePuraVidaCare(): void {
+    window.location.href = this.AUTH_URL;
   }
 }

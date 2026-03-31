@@ -36,11 +36,15 @@
 
   <!-- Botones login outline + registro con shimmer -->
   <div class="flex items-center gap-3">
-    <button class="text-[14px] font-semibold px-5 py-2 transition-all duration-200 hover:bg-[#0d9488]/5 rounded-full btn-outline">
+    <button
+      (click)="goToThePuraVidaCare()"
+      class="text-[14px] font-semibold px-5 py-2 transition-all duration-200 hover:bg-[#0d9488]/5 rounded-full btn-outline">
       Ingresar
     </button>
-    <button class="relative text-white text-[14px] font-semibold px-6 py-2.5 rounded-full transition-transform duration-200 hover:scale-[1.02] overflow-hidden group btn-filled">
-      <!-- Efecto shimmer al hover -->
+
+    <button
+      (click)="goToThePuraVidaCare()"
+      class="relative text-white text-[14px] font-semibold px-6 py-2.5 rounded-full transition-transform duration-200 hover:scale-[1.02] overflow-hidden group btn-filled">
       <div class="absolute inset-0 bg-linear-to-r from-transparent via-white/15 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
       <span class="relative z-10">Comenzar</span>
     </button>
