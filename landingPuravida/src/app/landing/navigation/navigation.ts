@@ -12,7 +12,7 @@ export class NavigationComponent {
 private readonly AUTH_URL = environment.authUrl;
 
   // Links visibles en la navbar
-  navLinks = ['Nosotros', 'Servicios', 'Roles', 'Equipo'];
+  navLinks = ['Nosotros', 'Servicios', 'Roles'];
   activeLink = 'Nosotros';
 
   // Mapeo link → id de sección en el DOM
@@ -20,7 +20,6 @@ private readonly AUTH_URL = environment.authUrl;
     'Nosotros':  'hero',
     'Servicios': 'services',
     'Roles':     'role-selection',
-    'Equipo':    'team'
   };
 
   // Activa el link y hace scroll suave a su sección
